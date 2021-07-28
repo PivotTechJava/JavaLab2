@@ -1,5 +1,9 @@
 package com.pivottech;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 public class ContainsDuplicates {
 
 
@@ -13,7 +17,11 @@ public class ContainsDuplicates {
     }
 
     private static boolean containsDuplicates(int[] arr) {
-        // your code here
-        return false; // replace this with right answer
+        Set<Integer> lump = new HashSet<Integer>();
+        for (int i : arr) {
+            if (lump.contains(i)) return true;
+            lump.add(i);
+        }
+        return false;
     }
 }
