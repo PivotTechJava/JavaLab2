@@ -1,5 +1,10 @@
 package com.pivottech;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 public class ContainsDuplicates {
 
 
@@ -9,11 +14,26 @@ public class ContainsDuplicates {
         int[] testArray = {1,2,3,3,4,5};
 
         // prints if contains duplicates
-        System.out.println(containsDuplicates(testArray) ? "contains duplicates" : "contains NO duplicates");
+        System.out.println(containsDuplicatesArr(testArray) ? "contains duplicates" : "contains NO duplicates");
     }
 
-    private static boolean containsDuplicates(int[] arr) {
-        // your code here
-        return false; // replace this with right answer
+    // uses Set
+    private static boolean containsDuplicatesSet(int[] arr) {
+        Set<Integer> lump = new HashSet<Integer>();
+        for (int i : arr) {
+            if (lump.contains(i)) return true;
+             lump.add(i);
+        }
+        return false;
+    }
+
+    // uses ArrayList
+    private static boolean containsDuplicatesArr(int[] arr) {
+        ArrayList<Integer> lump = new ArrayList<Integer>();
+        for (int i : arr) {
+            if (lump.contains(i)) return true;
+            lump.add(i);
+        }
+        return false;
     }
 }
