@@ -1,4 +1,6 @@
 package com.pivottech;
+import java.util.*;
+import java.util.Random;
 
 public class RollingDice {
 
@@ -7,7 +9,7 @@ public class RollingDice {
         System.out.println(roll(6));
     }
 
-    private static int[] roll(int n) {
+    private static ArrayList<Integer> roll(int n) {
         // your code here
 
         // Write a method called roll that accepts an integer n and rolls a six-sided dice n times. The method should return an array containing the values of the rolls.
@@ -15,11 +17,11 @@ public class RollingDice {
         // method accepts integer n
         // need to loop 1 to n times
         //declare an array
-        ArrayList <int> rollData = new ArrayList <int> ();
+        ArrayList <Integer> rollData = new ArrayList <Integer> ();
         //create loop that populates array
         int rollResult;
         for (int i = 1; i <= n; i++) {
-            rollResult = random.nextInt(6 - 1) + 1;
+            rollResult = new Random().nextInt(7 - 1) + 1;
             rollData.add(rollResult);
         }
 
