@@ -13,7 +13,14 @@ public class ContainsDuplicates {
     }
 
     private static boolean containsDuplicates(int[] arr) {
-        // your code here
-        return false; // replace this with right answer
+        boolean duplicateFound = false;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1 ; j < arr.length; j++) {
+                if (arr[i] == (arr[j])) {
+                    duplicateFound = true;
+                }
+            }
+        }
+        return duplicateFound;
     }
 }
