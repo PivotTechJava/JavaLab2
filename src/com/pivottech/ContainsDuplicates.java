@@ -1,7 +1,7 @@
 package com.pivottech;
 
-import java.io.OptionalDataException;
-
+//import java.io.OptionalDataException;
+//see if arr has duplicates
 public class ContainsDuplicates {
 
 
@@ -32,3 +32,4 @@ public class ContainsDuplicates {
        return x; // replace this with right answer
     }
 }
+
