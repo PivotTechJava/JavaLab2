@@ -9,7 +9,6 @@ public class CalculatingAverages {
         int numberArr[] = {4, 4, 4 ,4};
         // prints if contains duplicates
         System.out.println(getTheAverage(numberArr));
-
     }
 
     public static double getTheAverage(int[] arr) {
