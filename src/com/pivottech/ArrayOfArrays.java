@@ -4,7 +4,12 @@ package com.pivottech;
 public class ArrayOfArrays {
 
     public static void main(String[] args) {
-        int[][] arr = {{8,4,6,1,5},{4,4,3,2,1},{2,4,7,4,3},{3,5,6,8,5},{4,6,7,9,4}};
+        int[][] arr = {
+                {66,64,58,65,71,57,60},
+                {57,65,65,70,72,65,51},
+                {55,54,60,53,59,57,61},
+                {65,56,55,52,55,62,57},
+        };
 
         getAverage(arr);
     }
